@@ -1,0 +1,24 @@
+#navbar {
+    flex: 0 0 auto;
+    height: 112px;
+    position: relative;
+    background: var(--bg1);
+    padding: 0;
+}
+.nav-item {
+    background-color: transparent;
+    border: none;
+    color: var(--text-normal);
+    font-weight: 500;
+    padding: 12px;
+    margin: 0 5px;
+    border-radius: 3px;
+    line-height: normal;
+    font-size: 15px !important;
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+    user-select: none;
+    cursor: pointer;
+    transition: 150ms ease color;
+}
