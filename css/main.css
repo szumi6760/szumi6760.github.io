@@ -1,37 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
 * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: "Outfit", sans-serif;
+    transition: 0.5s;
 }
 body {
-    margin: 0;
+    background-color: #fff;
+    color: #000;
 }
 header {
+    position: relative;
     width: 100%;
     height: 70px;
-    background-color: #121420;
-}
-header img#header-icon {
-    margin: 10px;
-}
-header div#nav-menu {
-    display: inline;
-}
-header span.nav-element {
-    display: inline-flex;
+    background-color: #1B2432;
+    display: flex;
     align-items: center;
-    border-left: 3.5px solid #B76D68;
-    padding: 0 10px 0 5px;
-    gap: 5px;
+    justify-content: space-between;
+    padding: 0 40px;
 }
-header span.nav-element img {
+header div#logo {
+    display: flex;
+    align-items: center;
+}
+header div#logo a {
+    display: inline-block;
+    height: 28px;
+    width: 100px;
+}
+header div#logo img#header-icon {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    display: block;
+}
+header nav#nav-menu {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+header nav#nav-menu a.nav-element {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding-bottom: 2px;
+}
+header nav#nav-menu a.nav-element:hover {
+    border-bottom: 2px solid white;
+}
+header nav#nav-menu a.nav-element img {
     height: 16px;
     width: 16px;
     filter: invert(100%);
-    margin: 0;
+    display: block;
 }
-header span.nav-element a {
-    font-size: 16px;
+header nav#nav-menu span.separator {
+    margin: 0 -20px 0 -20px;
+    background-color: white;
+    height: 100%;
+    width: 2px;
+}
+header div#theme-switch input#toggle {
+    display: none;
+}
+header div#theme-switch div#switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header div#theme-switch div#switch label {
+    width: 70px;
+    height: 30px;
+    background-color: #F3F3F3;
+    border-radius: 50px;
+    cursor: pointer;
+    position: relative;
+}
+header div#theme-switch div#switch label div#circle {
+    width: 25px;
+    height: 25px;
+    border-radius: 999px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translate(10%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+header div#theme-switch div#switch label div#circle svg {
+    width: 15px;
+    position: absolute;
+}
+header div#theme-switch div#switch label div#circle svg.sun {
+    color: #FFD600;
+    margin-top: 0%;
+}
+header div#theme-switch div#switch label div#circle svg.moon {
     color: white;
-    text-decoration: none;
+    margin-top: -150%;
+}
+header div#theme-switch input[type="checkbox"]:checked + div#switch label {
+    background-color: #292b36;
+}
+header div#theme-switch input[type="checkbox"]:checked + div#switch label div#circle {
+    left: 100%;
+    transform: translate(-110%, -50%);
+    background-color: #121420;
+}
+header div#theme-switch input[type="checkbox"]:checked + div#switch label div#circle svg.sun {
+    margin-top: 150%;
+}
+header div#theme-switch input[type="checkbox"]:checked + div#switch label div#circle svg.moon {
+    margin-top: 0%;
+}
+main {
+    width: 100%;
+    height: 1000px;
+}
+footer {
+    width: 100%;
+    height: 210px;
+    background-color: #121420;
 }
